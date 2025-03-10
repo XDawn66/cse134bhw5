@@ -28,6 +28,13 @@
     </noscript>
     <button id="theme">🌞</button>
     <h1>Projects</h1>
+    <div class="data_loader">
+      <button onclick="load_projects(true)" id="load_local">Load Local</button>
+      <button onclick="load_projects(false)" id="load_remote">
+        Load remote
+      </button>
+    </div>
+
     <label for="category" id="filter">Choose a Category:</label>
     <select id="category" name="category">
       <option value="webdev">Web Development</option>
@@ -35,130 +42,8 @@
       <option value="graphicdesign">Graphic Design</option>
     </select>
     <main>
-      <article class="post_featured">
-        <header>
-          <h2>
-            <a href="https://github.com/XDawn66/Spotify_anime_song_recommanders"
-              >HARO Anime Song Recommender</a
-            >
-          </h2>
-        </header>
-        <a href="https://github.com/XDawn66/Spotify_anime_song_recommanders"
-          ><img src="../assets/image1.png" id="image_main"
-        /></a>
-        <p>
-          A website that can recommend the most recent popular anime songs
-          through spotify api, allowing users to try out the recommended songs
-          and save them into their personal Spotify playlist.
-        </p>
-        <p>
-          The new features include <ins>dark mode</ins> and
-          <ins>better performance</ins>.
-        </p>
-        <a
-          href="https://github.com/XDawn66/Spotify_anime_song_recommanders"
-          class="button_p"
-          >Check it out</a
-        >
-      </article>
-    </main>
-    <section class="posts">
-      <article class="project_page">
-        <header>
-          <h2>
-            <a
-              href="https://github.com/XDawn66/snake-game/tree/main/Snake/conio.h"
-              >The Snake Game</a
-            >
-          </h2>
-        </header>
-        <a
-          href="https://github.com/XDawn66/snake-game/tree/main/Snake/conio.h"
-          class="image fit"
-          ><img src="../assets/snake.png" alt=""
-        /></a>
-        <p>
-          Created a classic snake game with C++ and conio.h library. The snake
-          can grow longer and longer as they eat more fruits on the map. The
-          player will use WASD keys to control the snake and lose if their snake
-          eats its tail or hit the edge of the map.
-        </p>
-        <p>The previous version of the app <del>had bugs</del> is now fixed.</p>
-        <a
-          href="https://github.com/XDawn66/snake-game/tree/main/Snake/conio.h"
-          class="button_p"
-          >Check it out</a
-        >
-      </article>
-      <article class="project_page">
-        <header>
-          <h2>
-            <a href="https://github.com/XDawn66/Pig-game">Pig Games</a>
-          </h2>
-        </header>
-        <a href="https://github.com/XDawn66/Pig-game" class="image fit"
-          ><img src="../assets/pig.png" alt=""
-        /></a>
-        <p>
-          Created a game that allows two players to take terms to roll a dice.
-          Getting dice one = lost all points at that round && switch player. 1st
-          get 100 = victory! Using javascript,CSS,HTML,and DOM manipulation.
-        </p>
 
-        <a href="https://github.com/XDawn66/Pig-game" class="button_p"
-          >Check it out</a
-        >
-      </article>
-      <article class="project_page">
-        <header>
-          <h2>
-            <a href="https://github.com/XDawn66/Ubot">uBot</a>
-          </h2>
-        </header>
-        <a href="https://github.com/XDawn66/Ubot" class="image fit"
-          ><img src="../assets/ubot.jpg" alt=""
-        /></a>
-        <p>
-          Lead a group of 5 to build a robot that can sweep, vacuum, and mop at
-          the same time, and can be controled by a IR remoter. DC motors,
-          ultrasonic sensors, IR sensors, 5V batteries and arduino were used in
-          this project.
-        </p>
-        <ul class="actions special">
-          <li>
-            <a href="https://github.com/XDawn66/Ubot" class="button_p"
-              >Check it out</a
-            >
-          </li>
-        </ul>
-      </article>
-      <article class="project_page">
-        <header>
-          <h2>
-            <a href="https://github.com/XDawn66/Text-Advanture-Game-/tree/main"
-              >Text Adventure Game
-            </a>
-          </h2>
-        </header>
-        <a
-          href="https://github.com/XDawn66/Text-Advanture-Game-/tree/main"
-          class="image fit"
-          ><img src="../assets/p1.png" alt=""
-        /></a>
-        <p>
-          A text adventure game with sound and scoreboard using Java Swing for
-          elementary students. Users need to choose correct answers based on the
-          questions before they lose all their HP. The game includes a cheerful
-          opening and different sound effects for choosing right and wrong
-          answers. The top 5 players’ scores will be saved and can be viewed on
-          the starting page.
-        </p>
-        <a
-          href="https://github.com/XDawn66/Text-Advanture-Game-/tree/main"
-          class="button_p"
-          >Check it out</a
-        >
-      </article>
+    <section id="projects">
     </section>
     <br />
     <hr />

@@ -1,0 +1,18 @@
+{
+  "Projects": [
+    {
+      "name": "Text Adventure Game",
+      "img": "../assets/p1.png",
+      "img_description": "This is the game interface.",
+      "description": "A text adventure game with sound and scoreboard using Java Swing for elementary students. Users need to choose correct answers based on the questions before they lose all their HP.",
+      "link": "https://github.com/XDawn66/Text-Advanture-Game-/tree/main"
+    },
+    {
+      "name": "uBot",
+      "img": "../assets/ubot.jpg",
+      "img_description": "This is the robot we built.",
+      "description": "Lead a group of 5 to build a robot that can sweep, vacuum, and mop atthe same time, and can be controled by a IR remoter. DC motors,ultrasonic sensors, IR sensors, 5V batteries and arduino were used in this project.",
+      "link": "https://github.com/XDawn66/Ubot"
+    }
+  ]
+}
