@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My portfolio</title>
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <nav id="nav">
+    <ul class="links">
+      <li><a href="../Home.html">Home</a></li>
+      <li><a href="About.html">About Me</a></li>
+      <li><a href="Project.html">Projects</a></li>
+      <li><a href="Demo.html">Demo</a></li>
+      <li class="active"><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <body>
+    <noscript>
+      <style>
+        #theme {
+          display: none;
+        }
+      </style>
+      <p>
+        JavaScript is required for dark mode toggle functionality. Please enable
+        JavaScript to use this feature.
+      </p>
+    </noscript>
+    <button id="theme">🌞</button>
+    <h1><b>Send me a message</b></h1>
+    <section class="contact-form">
+      <form onsubmit="formsubmit(event)" novalidate>
+        <!-- Grouping form fields with <fieldset> -->
+        <fieldset>
+          <legend>Contact Information</legend>
+
+          <!-- Name Field -->
+          <div class="fields">
+            <div class="field">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                minlength="3"
+                maxlength="20"
+                required
+              />
+              <div class="error_container">
+                <output id="name_error"></output>
+                <output id="name_info"></output>
+              </div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="field">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                minlength="3"
+                maxlength="50"
+                required
+              />
+              <div class="error_container">
+                <output id="mail_error"></output>
+                <output id="mail_info"></output>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Message Field -->
+        <fieldset>
+          <legend>Your Message</legend>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              rows="3"
+              minlength="1"
+              maxlength="300"
+              required
+            ></textarea>
+            <div id="charCountContainer">
+              <span id="countdown"></span>
+            </div>
+            <div class="error_container">
+              <output id="message_error"></output>
+              <output id="message_info"></output>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="topic">Topic</label>
+          <select name="topic" id="topic">
+            <optgroup label="Design">
+              <option value="AI Design">AI Design</option>
+              <option value="Web Design">Web Design</option>
+            </optgroup>
+            <optgroup label="Development">
+              <option value="Web Development">Web Development</option>
+              <option value="App Development">App Development</option>
+            </optgroup>
+            <optgroup label="Bugs">
+              <option value="Potential Bugs">Potential Bugs</option>
+              <option value="Exisiting Bugs">Exisiting Bugs</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <!-- Submit Button -->
+        <ul class="actions">
+          <li><input type="submit" value="Send Message" /></li>
+        </ul>
+      </form>
+    </section>
+    <hr />
+    <footer id="footer">
+      <h2>Contact Information</h2>
+      <section class="split-contact">
+        <address>
+          Email: <a href="mailto:johndoe@example.com">johndoe@example.com</a
+          ><br />
+          Phone: +1 123 456 7890<br />
+          Website:
+          <a href="https://www.johndoeportfolio.com" target="_blank"
+            >www.johndoeportfolio.com</a
+          >
+        </address>
+        <aside>
+          <ul class="icons-alt">
+            <li>
+              <a href="#" class=""><span class="label">Twitter</span></a>
+            </li>
+            <li>
+              <a href="#" class=""><span class="label">Facebook</span></a>
+            </li>
+            <li>
+              <a href="#" class=""><span class="label">Instagram</span></a>
+            </li>
+            <li>
+              <a href="#" class=""><span class="label">GitHub</span></a>
+            </li>
+          </ul>
+        </aside>
+      </section>
+    </footer>
+
+    <section id="testing">
+      <h1>Canvas Example: Drawing a Rectangle</h1>
+
+      <!-- Define the canvas element -->
+      <canvas id="myCanvas" width="400" height="400"></canvas>
+
+      <dialog id="myDialog">
+        <p>This is a dialog box!</p>
+        <button onclick="document.getElementById('myDialog').close()">
+          Close
+        </button>
+      </dialog>
+      <button onclick="document.getElementById('myDialog').show()">
+        Open Dialog
+      </button>
+      <custom-button>Click Me</custom-button>
+      <hello-world></hello-world>
+      <script src="../src/javascript.js"></script>
+    </section>
+  </body>
+</html>

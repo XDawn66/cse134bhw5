@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My portfolio</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <body>
+    <nav id="nav">
+      <ul class="links">
+        <li class="active"><a href="Home.html">Home</a></li>
+        <li><a href="pages/About.html">About Me</a></li>
+        <li><a href="pages/Project.html">Projects</a></li>
+        <li><a href="pages/Demo.html">Demo</a></li>
+        <li><a href="pages/Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <svg width="100" height="100" id="logo">
+        <!-- Circle for the face -->
+        <circle
+          cx="50"
+          cy="50"
+          r="40"
+          stroke="green"
+          stroke-width="4"
+          fill="black"
+        />
+
+        <!-- Left Eye -->
+        <circle cx="35" cy="40" r="5" fill="white" />
+
+        <!-- Right Eye -->
+        <circle cx="65" cy="40" r="5" fill="white" />
+      </svg>
+      <search class="simple-search-bar">
+        <form action="/search">
+          <input type="text" placeholder="Search..." />
+          <button type="submit">Search</button>
+        </form>
+      </search>
+      <div class="audio-container">
+        <audio controls>
+          <source src="audio-file.mp3" type="audio/mpeg" />
+          <source src="audio-file.ogg" type="audio/ogg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </header>
+    <noscript>
+      <p>
+        JavaScript is required for dark mode toggle functionality. Please enable
+        JavaScript to use this feature.
+      </p>
+      <style>
+        #theme {
+          display: none;
+        }
+      </style>
+    </noscript>
+    <button id="theme">🌞</button>
+    <section class="hometop">
+      <hgroup>
+        <h1><strong> Zhenyu Jiang</strong></h1>
+        <p>CSE student @ UCSD</p>
+      </hgroup>
+      <p>
+        Hi, I am Zhenyu who Passionate on coding and robotics. My goal is to
+        make my own personal robot in the future.
+      </p>
+      <h3>Favor quote</h3>
+      <blockquote>
+        <i
+          >"Success is no accident. It is hard work, perseverance, learning,
+          studying, sacrifice, and most of all, love of what you are doing."
+          <cite>— Pelé</cite></i
+        >
+      </blockquote>
+    </section>
+
+    <section class="skills">
+      <table>
+        <caption>
+          My Programming Skills
+        </caption>
+        <colgroup>
+          <col />
+          <col />
+          <col />
+        </colgroup>
+        <tr>
+          <th>Programming Language</th>
+          <th>Experience Level</th>
+          <th>Projects Completed</th>
+        </tr>
+        <tr>
+          <td>Python</td>
+          <td>Advanced</td>
+          <td>10+</td>
+        </tr>
+        <tr>
+          <td>JavaScript</td>
+          <td>Intermediate</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>HTML & CSS</td>
+          <td>Intermediate</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>C++</td>
+          <td>Intermediate</td>
+          <td>10+</td>
+        </tr>
+      </table>
+      <table>
+        <caption>
+          My Language Skills
+        </caption>
+        <colgroup>
+          <col />
+          <col />
+        </colgroup>
+        <tr>
+          <th>Language</th>
+          <th>Proficiency Level</th>
+        </tr>
+        <tr>
+          <td>English</td>
+          <td>Fluent</td>
+        </tr>
+        <tr>
+          <td>Mandarin</td>
+          <td>Fluent</td>
+        </tr>
+        <tr>
+          <td>Cantonese</td>
+          <td>Fluent</td>
+        </tr>
+      </table>
+    </section>
+    <main>
+      <section class="projects">
+        <h2>Projects Preview</h2>
+
+        <video width="640" height="360" controls>
+          <source src="demo-video.mp4" type="video/mp4" />
+          <source src="demo-video.webm" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+
+        <article>
+          <h3>Project 1</h3>
+          <figure id="project1">
+            <picture class="image-frame">
+              <source srcset="assets/image1.png" type="image/png" />
+              <img
+                src="assets/image1.png"
+                alt="HARO Anime Song Recommender"
+                id="mainproject"
+              />
+            </picture>
+            <figcaption>HARO Anime Song Recommender</figcaption>
+          </figure>
+        </article>
+
+        <article>
+          <h3>Project 2</h3>
+          <figure id="project2">
+            <picture class="image-frame">
+              <source srcset="assets/snake.png" type="image/png" />
+              <img src="assets/snake.png" alt="The Snake Game" />
+            </picture>
+            <figcaption>The Snake Game</figcaption>
+          </figure>
+        </article>
+
+        <article>
+          <h3>Project 3</h3>
+          <figure id="project3">
+            <picture class="image-frame">
+              <source srcset="assets/pig.png" type="image/png" />
+              <img src="assets/pig.png" alt="Pig Games" />
+            </picture>
+            <figcaption>Pig Games</figcaption>
+          </figure>
+        </article>
+
+        <article>
+          <h3>Project 4</h3>
+          <figure id="project4">
+            <picture class="image-frame">
+              <source srcset="assets/p1.png" type="image/png" />
+              <img src="assets/p1.png" alt="Text Adventure Game" />
+            </picture>
+            <figcaption>Text Adventure Game</figcaption>
+          </figure>
+        </article>
+
+        <button onclick="location.href='pages/Project.html';" id="more">
+          See More
+        </button>
+      </section>
+    </main>
+    <script></script>
+    <hr />
+    <footer id="footer">
+      <h2>Contact Information</h2>
+      <section class="split-contact">
+        <address>
+          Email: <a href="mailto:johndoe@example.com">johndoe@example.com</a
+          ><br />
+          Phone: +1 123 456 7890<br />
+          Website:
+          <a href="https://www.johndoeportfolio.com" target="_blank"
+            >www.johndoeportfolio.com</a
+          >
+        </address>
+        <aside>
+          <ul class="icons-alt">
+            <li>
+              <a href="#" class=""><span class="label">Twitter</span></a>
+            </li>
+            <li>
+              <a href="#" class=""><span class="label">Facebook</span></a>
+            </li>
+            <li>
+              <a href="#" class=""><span class="label">Instagram</span></a>
+            </li>
+            <li>
+              <a href="#" class=""><span class="label">GitHub</span></a>
+            </li>
+          </ul>
+        </aside>
+      </section>
+    </footer>
+    <script src="src/javascript_general.js"></script>
+  </body>
+</html>
