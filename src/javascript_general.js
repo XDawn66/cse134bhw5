@@ -60,7 +60,96 @@ document.addEventListener("DOMContentLoaded", () => {
 class Projectcard extends HTMLElement {
   constructor() {
     super();
-    // this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: "open" });
+    this.shadowRoot.innerHTML = `
+      <style>
+        :host {
+          display: flex;
+        }
+       .project-card {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         background-color: #333;
+         border-radius: 10px;
+         padding: 1.5rem;
+         text-align: center;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+         margin: 1rem;
+       }
+ 
+       h2 {
+         font-size: 2rem;
+         font-weight: bold;
+         font-family: "Montserrat", sans-serif;
+         color: white;
+         margin-bottom: 0.5rem;
+       }
+ 
+       img {
+         width: 100%;
+         max-width: 500px;
+         height: auto;
+         border-radius: 10px;
+         margin-bottom: 1rem;
+       }
+ 
+       p {
+         width: 60%;
+         font-size: 1.2rem;
+         font-family: "Montserrat", sans-serif;
+         color: white;
+         margin-bottom: 1rem;
+       }
+ 
+       button {
+         padding: 0.5rem 1rem;
+         background-color: skyblue;
+         color: white;
+         border: none;
+         border-radius: 10px;
+         cursor: pointer;
+         font-size: 1.2rem;
+         transition: background 0.3s ease;
+       }
+ 
+       button:hover {
+         background-color: deepskyblue;
+       }
+        </style>
+      <div class="project-card">
+      <h2></h2>
+      <img src="" alt="Project Image">
+      <p></p>
+      <button>View Project</button>
+      </div>
+     `;
+    this.titleElement = this.shadowRoot.querySelector("h2");
+    this.imageElement = this.shadowRoot.querySelector("img");
+    this.descriptionElement = this.shadowRoot.querySelector("p");
+    this.buttonElement = this.shadowRoot.querySelector("button");
+  }
+
+  static get observedAttributes() {
+    return ["title", "image", "description", "link"];
+  }
+
+  connectedCallback() {
+    this.render();
+  }
+
+  render() {
+    this.titleElement.textContent = this.getAttribute("title") || "No Title";
+    this.imageElement.src = this.getAttribute("image") || "";
+    this.imageElement.alt = `Image of ${
+      this.getAttribute("title") || "project"
+    }`;
+    this.descriptionElement.textContent =
+      this.getAttribute("description") || "No Description";
+    this.buttonElement.onclick = () => {
+      const link = this.getAttribute("link");
+      if (link) window.open(link, "blank");
+    };
   }
 }
 
@@ -105,24 +194,12 @@ function create_project_card(project_data) {
 
   for (let i = 0; i < project_data.length; i++) {
     let project_container = document.createElement("project-card");
-    let project_title = document.createElement("h1");
-    project_title.textContent = project_data[i].name;
-    let project_image_container = document.createElement("picture");
-    let project_image = document.createElement("img");
-    project_image.src = project_data[i].img;
-    project_image.alt = project_data[i].img_description;
-    project_image_container.appendChild(project_image);
-    let project_description = document.createElement("p");
-    project_description.textContent = project_data[i].description;
-    let project_button = document.createElement("button");
-    project_button.textContent = "View Project";
-    project_button.onclick = () => {
-      window.open(project_data[i].link);
-    };
-    project_container.appendChild(project_title);
-    project_container.appendChild(project_image_container);
-    project_container.appendChild(project_description);
-    project_container.appendChild(project_button);
+
+    project_container.setAttribute("title", project_data[i].name);
+    project_container.setAttribute("image", project_data[i].img);
+    project_container.setAttribute("description", project_data[i].description);
+    project_container.setAttribute("link", project_data[i].link);
+
     project_section.appendChild(project_container);
   }
 }
