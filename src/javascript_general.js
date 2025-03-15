@@ -117,12 +117,14 @@ class Projectcard extends HTMLElement {
          background-color: deepskyblue;
        }
         </style>
-      <div class="project-card">
+      <article class="project-card">
       <h2></h2>
+      <picture>
       <img src="" alt="Project Image">
+      </picture>
       <p></p>
       <button>View Project</button>
-      </div>
+      </article>
      `;
     this.titleElement = this.shadowRoot.querySelector("h2");
     this.imageElement = this.shadowRoot.querySelector("img");
@@ -203,3 +205,38 @@ function create_project_card(project_data) {
     project_section.appendChild(project_container);
   }
 }
+
+function add_work_experience() {
+  const experienceData = [
+    {
+      job: "Testing Engineer",
+      company: "Hyve Solutions",
+      date: "JUNE 2022 - NOV 2022",
+      details:
+        "Performed the setup, testing, and troubleshooting of Big Tech companies’ computer racks using Putty and SSH",
+    },
+    {
+      job: "Coding Instructor",
+      company: "Code For Fun",
+      date: "MAR 2023 - JUNE 2023",
+      details:
+        "Tutored and Helped K-12 students start their CS journey by holding coding classes at local schools.",
+    },
+  ];
+  const template = document.getElementById("workTemplate");
+  experienceData.forEach((data) => {
+    {
+      const clone = template.content.cloneNode(true);
+      clone.querySelector(".job-summary").textContent = data.job;
+      clone.querySelector(".job-company").textContent = data.company;
+      clone.querySelector(".job-date").textContent = data.date;
+      clone.querySelector(".job-description").textContent = data.details;
+      document.querySelector(".work").appendChild(clone);
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  event.preventDefault();
+  add_work_experience();
+});

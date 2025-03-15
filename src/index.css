@@ -292,7 +292,7 @@ section {
 }
 
 #me {
-  height: 30dvh;
+  height: 50vh;
   border: none;
 }
 
@@ -846,4 +846,8 @@ project-card button {
   cursor: pointer;
   font-size: 1.5rem;
   margin-left: 1rem;
+}
+
+#testing {
+  display: none;
 }
