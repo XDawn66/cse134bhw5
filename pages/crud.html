@@ -18,18 +18,21 @@
   <body>
     <h1>CRUD for the projects (local storage)</h1>
     <section id="buttons">
-      <button onclick="" id="Create_crud">Create</button>
-      <button onclick="" id="Read_crud">Read</button>
-      <button onclick="" id="Update_crud">Update</button>
-      <button onclick="" id="Delete_crud">Delete</button>
+      <button onclick="add()" id="Create_crud">Create</button>
+      <button onclick="read()" id="Read_crud">Read</button>
+      <button onclick="update()" id="Update_crud">Update</button>
+      <button onclick="remove()" id="Delete_crud">Delete</button>
     </section>
     <section id="display">
       <table id="crud_table">
         <tr>
-          <th>Key</th>
-          <th>Value</th>
+          <th>Name</th>
+          <th>img_links</th>
+          <th>Details</th>
+          <th>external_links</th>
         </tr>
       </table>
     </section>
   </body>
+  <script src="/src/crud.js"></script>
 </html>

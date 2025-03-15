@@ -345,7 +345,8 @@ table {
   color: #aaa; /* Lighter placeholder text */
 }
 
-.simple-search-bar button {
+.simple-search-bar,
+#buttons button {
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -850,4 +851,27 @@ project-card button {
 
 #testing {
   display: none;
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 3rem;
+}
+
+#crud_table {
+  display: block;
+  width: 90vw;
+  background-color: #555;
+  justify-content: center;
+  align-items: center;
+}
+
+#crud_table th,
+#crud_table td {
+  text-align: center;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1rem;
 }
