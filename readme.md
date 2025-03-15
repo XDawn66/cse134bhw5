@@ -1,6 +1,11 @@
 # CSE 134B HW5
 
-## Changes
+### Link to the website:
+https://fantastic-sopapillas-ec21d2.netlify.app/
+
+### Link to the CRUD
+https://fantastic-sopapillas-ec21d2.netlify.app/pages/crud
+## Key Changes Compare to HW3
 
 - Add style hidden to the extra credit area
   - I feel those part doesn't fit the purpose of the portfolio site so I hide it. Since I hide it with by putting css display:none, the graders can still see them in code
