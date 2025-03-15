@@ -38,6 +38,10 @@ function remove() {
   }
   let project_data = JSON.parse(localStorage.getItem("projects"));
   let index = project_data.findIndex((project) => project.name === title);
+  if (index === -1) {
+    alert("Project not found!");
+    return;
+  }
   project_data.splice(index, 1);
   localStorage.setItem("projects", JSON.stringify(project_data));
   alert("Project removed successfully!");
